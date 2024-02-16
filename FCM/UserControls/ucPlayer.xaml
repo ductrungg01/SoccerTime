@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="FCM.UserControls.ucPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:FCM.UserControls"
+             mc:Ignorable="d" 
+             x:Name="wdPlayer"
+             DataContext="{StaticResource PlayerVM}"
+             d:DesignHeight="50" d:DesignWidth="640">
+            
+    <Grid Height="50">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontWeight" Value="Medium" />
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1.8*"/>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.82*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <TextBlock
+                x:Name="tblIndex"
+                Text="1" />
+            <Rectangle Fill="Gray" Height="25" Width="1" HorizontalAlignment="Right" />
+        </Grid>
+        <Grid Grid.Column="1">
+            <TextBlock
+                x:Name="tblName"
+                TextWrapping="WrapWithOverflow"
+                TextAlignment="Center"
+                Text="Nguyễn Thị Long" />
+            <Rectangle Fill="Gray" Height="25" Width="1" HorizontalAlignment="Right" />
+        </Grid>
+        <Grid Grid.Column="2">
+            <TextBlock
+                x:Name="tblNumber"
+                Text="12" />
+            <Rectangle Fill="Gray" Height="25" Width="1" HorizontalAlignment="Right" />
+        </Grid>
+        <Grid Grid.Column="3">
+            <TextBlock 
+                x:Name="tblPosition"
+                Text="Tiền vệ" />
+            <Rectangle Fill="Gray" Height="25" Width="1" HorizontalAlignment="Right" />
+        </Grid>
+        <Grid Grid.Column="4">
+            <TextBlock
+                x:Name="tblDoB"
+                Text="31/02/1999" />
+            <Rectangle Fill="Gray" Height="25" Width="1" HorizontalAlignment="Right" />
+        </Grid>
+        <Grid Grid.Column="5">
+            <TextBlock
+                x:Name="tblNationality"
+                TextWrapping="WrapWithOverflow"
+                TextAlignment="Center"
+                Text="Việt Nam" />
+            <Rectangle Fill="Gray" Height="25" Width="1" HorizontalAlignment="Right" />
+        </Grid>
+        <!--Buttons-->
+        <Grid Grid.Column="6">
+            <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                <Button
+                    x:Name="btnEditInfor"
+                    Style="{StaticResource MyGreenButtonStyle}"
+                    Background="#4554ff"
+                    Padding="0"
+                    Width="24" Height="24"
+                    MinWidth="0">
+                    <materialDesign:PackIcon
+                            Width="15"
+                            Height="15"
+                            Kind="InformationOutline"/>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding EditPlayerCommand}"
+                                    CommandParameter="{Binding ElementName=wdPlayer}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button
+                    x:Name="btnDeletePlayer"
+                    Style="{StaticResource MyRedButtonStyle}"
+                    Padding="0"
+                    Width="24" Height="24"
+                    MinWidth="0" Margin="5 0 0 0">
+                    <materialDesign:PackIcon
+                            Width="15"
+                            Height="15"
+                            Kind="DeleteOutline"/>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding DeletePlayerCommand}"
+                                    CommandParameter="{Binding ElementName=wdPlayer}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Rectangle Grid.ColumnSpan="7" Fill="Gray" Height="1"  VerticalAlignment="Bottom" />
+    </Grid>
+</UserControl>

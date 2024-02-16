@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="FCM.UserControls.ucLeagueCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FCM.UserControls"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             x:Name="wcLeagueCard"
+             d:DesignHeight="190" d:DesignWidth="260"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Left"
+             DataContext="{StaticResource LeagueCardVM}"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"      
+             Margin="0 20 20 0">
+
+             
+    <Border CornerRadius="8" 
+            Background="Transparent" 
+            BorderBrush="#fff"
+            BorderThickness="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="1.4*"/>
+                </Grid.RowDefinitions>
+                <!--Logo-->
+                 <Image x:Name="imgLeagueLogo"
+                       Margin="15 15 15 5"
+                       Width="210">
+
+                    <Image.Source>
+                    <BitmapImage UriSource="/Resource/Images/vleague.png" />
+                    </Image.Source>
+                </Image>
+            <!--Detail-->
+                <Grid Grid.Row="1">
+                    <TextBlock x:Name="tblLeagueName"
+                           Text="Giải bóng đá ao làng"
+                           Foreground="White"
+                           FontSize="16"
+                           TextWrapping="WrapWithOverflow"
+                           TextAlignment="Center"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <TextBlock x:Name="tblLeagueTime"
+                           Text="Thời gian: 12/3/2021"
+                           Foreground="White"
+                           FontSize="13"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <TextBlock x:Name="tblLeagueFormula"
+                           Text="Loại trực tiếp"
+                           Foreground="White"
+                           FontSize="13"
+                           FontStyle="Italic"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"/>
+
+                    <TextBlock x:Name="tblLeagueTeamsCount"
+                           Text="16 đội"
+                           Foreground="White"
+                           FontWeight="Regular"
+                           FontSize="14"
+                           FontStyle="Italic"
+                           HorizontalAlignment="Left"
+                           Margin="20 0 0 10"
+                           VerticalAlignment="Bottom"/>
+                <Grid Grid.Column="0">
+                    <Button x:Name="btnLeagueDetail"
+                            Style="{StaticResource MyGreenButtonStyle}"
+                            MinWidth="20"
+                            Width="30"
+                            Height="30"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Padding="0"
+                            Margin="0 0 5 5">
+                        <materialDesign:PackIcon
+                            Kind="ArrowRightBold"/>
+
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding GetDetailCommand}"
+                                                       CommandParameter="{Binding ElementName=wcLeagueCard}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+
+                    </Button>
+                    <Button x:Name="btnRemoveLeague"
+                            Style="{StaticResource MyRedButtonStyle}"
+                            MinWidth="20"
+                            Width="30"
+                            Height="30"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Padding="0"
+                            Margin="0 0 35 5">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding DeleteLeagueCommand}"
+                                                       CommandParameter="{Binding ElementName=wcLeagueCard}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <materialDesign:PackIcon
+                            Kind="DeleteOutline"/>
+                    </Button>
+                </Grid>
+
+            </Grid>
+     
+            </Grid>
+    </Border>
+
+</UserControl>

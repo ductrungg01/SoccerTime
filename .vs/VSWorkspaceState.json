@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FCM",
+    "\\FCM\\DAO",
+    "\\FCM\\DTO",
+    "\\FCM\\Resource",
+    "\\FCM\\UserControls",
+    "\\FCM\\View",
+    "\\FCM\\ViewModel"
+  ],
+  "SelectedNode": "\\FCM\\MainWindow.xaml",
+  "PreviewInSolutionExplorer": false
+}

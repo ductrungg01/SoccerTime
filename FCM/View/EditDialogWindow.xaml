@@ -1,0 +1,66 @@
+﻿<Window x:Class="FCM.View.EditDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FCM.View"
+        mc:Ignorable="d"
+        Title="Chỉnh sửa" Height="170" Width="260"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        x:Name="wdEditDialog"
+        DataContext="{StaticResource EditDialogVM}"
+        Icon="/Resource/Images/software-logo.png"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#fefefe"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBox
+                x:Name="tbValue"
+                materialDesign:HintAssist.Hint="Nhập giá trị mới"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                VerticalAlignment="Top"
+                Height="45" Width="210" 
+                FontSize="14" Padding="10 13 0 0"
+                Margin="0 20 0 0" InputScope="Number"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Width="210">
+                <Button 
+                    x:Name="btnAccept"
+                    Content="Xác nhận"
+                    Style="{StaticResource MyGreenButtonStyle}" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding EditDialogCommand}"
+                                                       CommandParameter="{Binding ElementName=wdEditDialog}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button 
+                    x:Name="btnCancel"
+                    Content="Huỷ" Margin="10 0 0 0"
+                    Style="{StaticResource MyRedButtonStyle}" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CancelEditDialogCommand}"
+                                                       CommandParameter="{Binding ElementName=wdEditDialog}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

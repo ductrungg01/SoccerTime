@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="16.png" />
+    <None Remove="4.png" />
+    <None Remove="8.png" />
+    <None Remove="background3.jpg" />
+    <None Remove="coder.png" />
+    <None Remove="engineer.png" />
+    <None Remove="field.png" />
+    <None Remove="football.png" />
+    <None Remove="football3.png" />
+    <None Remove="football4.png" />
+    <None Remove="football6.png" />
+    <None Remove="help.png" />
+    <None Remove="players.png" />
+    <None Remove="Resource\Images\arsenal-logo.png" />
+    <None Remove="Resource\Images\cat.png" />
+    <None Remove="Resource\Images\coder.png" />
+    <None Remove="Resource\Images\dog.png" />
+    <None Remove="Resource\Images\engineer.png" />
+    <None Remove="Resource\Images\error.png" />
+    <None Remove="Resource\Images\field.png" />
+    <None Remove="Resource\Images\football.png" />
+    <None Remove="Resource\Images\football3.png" />
+    <None Remove="Resource\Images\football4.png" />
+    <None Remove="Resource\Images\football6.png" />
+    <None Remove="Resource\Images\help.png" />
+    <None Remove="Resource\Images\LoginBackground.jpg" />
+    <None Remove="Resource\Images\NoImageSelected.png" />
+    <None Remove="Resource\Images\NoLogoSelected.png" />
+    <None Remove="Resource\Images\players.png" />
+    <None Remove="Resource\Images\settings.png" />
+    <None Remove="Resource\Images\software-logo.png" />
+    <None Remove="Resource\Images\success.png" />
+    <None Remove="Resource\Images\vleague.png" />
+    <None Remove="settings.png" />
+    <None Remove="software-logo.png" />
+    <None Remove="UserControls\arsenal-logo.png" />
+    <None Remove="View\cat.png" />
+    <None Remove="View\error.png" />
+    <None Remove="View\NoImageSelected.png" />
+    <None Remove="View\NoLogoSelected.png" />
+    <None Remove="View\success.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="5.8.2" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.2" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.3" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+    <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\Images\4.png" />
+    <Resource Include="Resource\Images\8.png" />
+    <Resource Include="Resource\Images\16.png" />
+    <Resource Include="Resource\Images\arsenal-logo.png" />
+    <Resource Include="Resource\Images\cat.png" />
+    <Resource Include="Resource\Images\coder.png" />
+    <Resource Include="Resource\Images\dog.png" />
+    <Resource Include="Resource\Images\engineer.png" />
+    <Resource Include="Resource\Images\error.png" />
+    <Resource Include="Resource\Images\field.png" />
+    <Resource Include="Resource\Images\football.png" />
+    <Resource Include="Resource\Images\football3.png" />
+    <Resource Include="Resource\Images\football4.png" />
+    <Resource Include="Resource\Images\football6.png" />
+    <Resource Include="Resource\Images\help.png" />
+    <Resource Include="Resource\Images\LoginBackground.jpg" />
+    <Resource Include="Resource\Images\NoImageSelected.png" />
+    <Resource Include="Resource\Images\NoLogoSelected.png" />
+    <Resource Include="Resource\Images\players.png" />
+    <Resource Include="Resource\Images\settings.png" />
+    <Resource Include="Resource\Images\software-logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Images\success.png" />
+    <Resource Include="Resource\Images\vleague.png" />
+  </ItemGroup>
+
+</Project>

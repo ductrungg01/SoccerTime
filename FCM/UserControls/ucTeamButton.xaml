@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="FCM.UserControls.ucTeamButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FCM.UserControls"
+                     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             x:Name="wpTeamButton"
+             DataContext="{StaticResource TeamButtonVM}"
+             d:DesignHeight="60" d:DesignWidth="230" Margin="0" Padding="0" BorderThickness="0">
+    <Grid>
+        <Button Height="60" Background="Transparent" Margin="0" Padding="0" BorderThickness="0">
+            <Grid>
+                <Image
+                    x:Name="imgLogo"
+                    Width="35" Height="35" HorizontalAlignment="Left" 
+                    Source="/Resource/Images/arsenal-logo.png" />
+                <TextBlock 
+                    x:Name="tblName"
+                    Text="Real Madrid"
+                    TextWrapping="WrapWithOverflow"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="40 0 0 0"/>
+            </Grid>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <i:InvokeCommandAction Command="{Binding GetDetailCommand}"
+                                    CommandParameter="{Binding ElementName=wpTeamButton}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Rectangle Height="1" Fill="Gray" VerticalAlignment="Bottom" />
+    </Grid>
+</UserControl>

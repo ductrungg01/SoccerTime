@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="FCM.UserControls.ucMatchDetailNoEdit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FCM.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="900"
+             Background="#282823"
+             Foreground="White"
+             VerticalAlignment="Top"
+             Margin="0 25 0 0">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="2.5*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <TextBlock Text="No" 
+                    x:Name="id"
+                    Foreground="#fff"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+            <Rectangle Height="30" Width="1" Fill="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <TextBlock Text="Đội 1" 
+                       x:Name="Team1"
+                    Foreground="#fff"
+                    FontSize="16"
+                    TextWrapping="WrapWithOverflow"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+            <Rectangle Height="30" Width="1" Fill="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <TextBlock Text="Đội 2" 
+                       x:Name="Team2"
+                    Foreground="#fff"
+                    TextWrapping="WrapWithOverflow"
+                    TextAlignment="Center"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+            <Rectangle Height="30" Width="1" Fill="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Column="3">
+            <TextBlock Text="Sân" 
+                       x:Name="San"
+                    Foreground="#fff"
+                    TextWrapping="WrapWithOverflow"
+                    TextAlignment="Center"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+            <Rectangle Height="30" Width="1" Fill="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Column="4">
+            <TextBlock Text="Giờ" 
+                       x:Name="time"
+                    Foreground="#fff"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+            <Rectangle Height="30" Width="1" Fill="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Column="5">
+            <TextBlock Text="Ngày" 
+                       x:Name="Date"
+                    Foreground="#fff"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+            <Rectangle Height="30" Width="1" Fill="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Column="6">
+            <TextBlock Text="Vòng đấu" 
+                       x:Name="Round"
+                    Foreground="#fff"
+                    FontSize="16"
+                    TextWrapping="WrapWithOverflow"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"/>
+        </Grid>
+        <Rectangle Grid.ColumnSpan="7" Fill="#ccc" Height="1" VerticalAlignment="Bottom" Margin="0 0 0 -10"/>
+    </Grid>
+</UserControl>

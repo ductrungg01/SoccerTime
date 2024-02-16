@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="FCM.UserControls.ucGoal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="410"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             DataContext="{StaticResource ResultVM}"
+             x:Name="ucGoalCard"
+             
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="#fff"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid Grid.Column="0">
+            <TextBlock
+                x:Name="tblNumber"
+                Text="7" />
+        </Grid>
+        <Grid Grid.Column="1">
+            <TextBlock
+                x:Name="tblFootballer"
+                TextWrapping="WrapWithOverflow"
+                TextAlignment="Center"
+                Text="Ronaldo" />
+        </Grid>
+        <Grid Grid.Column="2">
+            <TextBlock
+                x:Name="tblTime"
+                Text="14'" />
+        </Grid>
+        <Grid Grid.Column="3">
+            <TextBlock
+                x:Name="tblTypeOfGoal"
+                Text="Đánh đầu" />
+        </Grid>
+        <Grid Grid.Column="4">
+            <StackPanel Orientation="Horizontal"
+                        Margin="25 0 0 0">
+                <Button 
+                    x:Name="btnEditGoal"
+                    Background="#4554ff"
+                    Width="25"
+                    Height="25"
+                    Padding="0">
+                    <materialDesign:PackIcon Kind="Pencil" />
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding EditGoalCommand}"
+                                                    CommandParameter="{Binding ElementName=ucGoalCard}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+
+                <Button 
+                    x:Name="btnDeleteGoal"
+                    Background="#ff0000"
+                    Width="25"
+                    Height="25"
+                    Padding="0">
+                    <materialDesign:PackIcon Kind="DeleteOutline" />
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding DeleteGoalCommand}"
+                                                    CommandParameter="{Binding ElementName=ucGoalCard}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

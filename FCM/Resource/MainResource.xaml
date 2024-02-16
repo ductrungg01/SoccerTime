@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodel="clr-namespace:FCM.ViewModel">
+    <viewmodel:MainViewModel x:Key="MainVM"/>
+    <viewmodel:LoginViewModel x:Key="LoginVM"/>
+    <viewmodel:AddLeagueViewModel x:Key="AddLeagueVM" />
+    <viewmodel:ResultViewModel x:Key="ResultVM" />
+    <viewmodel:ChangePasswordViewModel x:Key="ChangePasswordVM"/>
+    <viewmodel:LeagueCardViewModel x:Key="LeagueCardVM" />
+    <viewmodel:TeamButtonViewModel x:Key="TeamButtonVM"/>
+    <viewmodel:AddTeamViewModel x:Key="AddTeamVM"/>
+    <viewmodel:AddPlayerViewModel x:Key="AddPlayerVM"/>
+    <viewmodel:PlayerViewModel x:Key="PlayerVM"/>
+    <viewmodel:EditMatchInforViewModel x:Key="EditMatchInforVM"/>
+    <viewmodel:EditDialogViewModel x:Key="EditDialogVM"/>
+    <viewmodel:AddGoalTypeViewModel x:Key="AddGoalTypeVM"/>
+    <viewmodel:ConfirmDialogViewModel x:Key="ConfirmDialogVM"/>
+    <viewmodel:MessageBoxViewModel x:Key="MessageBoxVM"/>
+
+    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#222"/>
+
+</ResourceDictionary>

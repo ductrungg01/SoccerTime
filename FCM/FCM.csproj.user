@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UserControls\ucCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucFootballer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucGoal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucLeagueCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucMatchDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucMatchDetailNoEdit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucPlayer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucSwitchedPlayers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ucTeamButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddCardWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddGoalTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddGoalWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddLeagueWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddPlayerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddTeamWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ChangePasswordWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ConfirmDialogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditDialogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditMatchInforWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MessageBoxWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PenaltyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ResultRecordingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SwitchPlayersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\MainResource.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\ScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\TextStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucFootballer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucGoal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucLeagueCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucMatchDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucMatchDetailNoEdit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucPlayer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucSwitchedPlayers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ucTeamButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddCardWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddGoalTypeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddGoalWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddLeagueWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddPlayerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddTeamWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ChangePasswordWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ConfirmDialogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditDialogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditMatchInforWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MessageBoxWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PenaltyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ResultRecordingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SwitchPlayersWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

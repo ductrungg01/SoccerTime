@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="FCM.UserControls.ucFootballer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"      
+             xmlns:local="clr-namespace:FCM.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1.3*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="#fff"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+        <Grid Grid.Column="0">
+            <TextBlock
+                x:Name="tblNumber"
+                Text="3" />
+        </Grid>
+        <Grid Grid.Column="1">
+            <TextBlock
+                x:Name="tblName"
+                TextWrapping="WrapWithOverflow"
+                TextAlignment="Center"
+                Text="Nguyễn Văn A" />
+        </Grid>
+        <Grid Grid.Column="2">
+            <TextBlock
+                x:Name="tblPosition"
+                Text="Trung vệ" />
+        </Grid>
+        <Grid Grid.Column="3">
+            <materialDesign:PackIcon 
+                x:Name="icCard"
+                Kind="Cards"
+                Width="25"
+                Height="25"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="Yellow"/>
+        </Grid>
+    </Grid>
+</UserControl>
